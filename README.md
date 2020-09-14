@@ -45,7 +45,7 @@ write successfully
 1600115448343|696|3|cloud_register.c:847:register_handle_refresh_hellocloud_request| - register_handle_refresh_hellocloud_request called
 Sep 14 22:30:48 login[1274]: root login on 'pts/0'
 ```
-* Flash dump
+* Dump the Flash (CLIP + Flash Reader, or can we get somehow access to the U-Boot console and read it out?)
 
 - - - - -
 
