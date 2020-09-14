@@ -24,3 +24,23 @@ Reverse Engineering the TP-Link Tapo C200 camera
 | mtd8  | 0x000000060000   | 0x000000800000   | x               | x             | firmware      |
 
 
+- - - - -
+
+### Notes
+
+Turning on Diagnostics in the Tapo app results in a `root` login on `pts/0`
+
+**TODOs:**
+* Do we need an internet connection to trigger this, can we do the same from local network with internet access ?  
+
+```
+[   58.336000] Erase from 0X40000 to 0X50000:
+[   58.348000] .
+[   58.353000] Program from 0X40000 to 0X50000:
+[   58.560000] .
+write successfully
+1600115448305|696|3|cloud_interface.c:720:tlcc_refresh_helloCloud| - tlcc_refresh_helloCloud called
+1600115448307|543|3|cloud_client_handle.c:1087:cloud_client_handle_refresh_helloCloud| - cloud_client_handle_refresh_helloCloud called
+1600115448343|696|3|cloud_register.c:847:register_handle_refresh_hellocloud_request| - register_handle_refresh_hellocloud_request called
+Sep 14 22:30:48 login[1274]: root login on 'pts/0'
+```
