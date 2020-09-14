@@ -8,6 +8,7 @@ Reverse Engineering the TP-Link Tapo C200 camera
 | SoC          | Realtek RTS3903     | CPU: 500MHz :rx5281 prid=0xdc02                           | 
 | RAM          | x                   | 64 MiB @ 1066 MHz                                         |
 | Serial Flash | XMC XM25QH64A       | with page size 256 Bytes, erase size 64 KiB, total 8 MiB. |
+| Sensor       | SC2232H             |                                                           | 
 
 ### Flash Layout
 
@@ -44,3 +45,9 @@ write successfully
 1600115448343|696|3|cloud_register.c:847:register_handle_refresh_hellocloud_request| - register_handle_refresh_hellocloud_request called
 Sep 14 22:30:48 login[1274]: root login on 'pts/0'
 ```
+
+- - - - -
+
+### Links
+
+[TE7C200 - FCCid.io](https://fccid.io/TE7C200)
