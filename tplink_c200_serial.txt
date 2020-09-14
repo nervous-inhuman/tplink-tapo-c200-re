@@ -1,0 +1,402 @@
+U-Boot 2014.01-v1.2 (Jan 19 2020 - 14:59:28)
+Board: IPCAM RTS3903 CPU: 500M :rx5281 prid=0xdc02
+force spi nor mode
+DRAM:  64 MiB @ 1066 MHz
+Skipping flash_init
+Flash: 0 Bytes
+flash status is 0, 0, 0
+SF: Detected XM25QH64A with page size 256 Bytes, erase size 64 KiB, total 8 MiB
+Using default environment
+
+Autobooting in 1 seconds
+copying flash to 0x81500000
+flash status is 0, 0, 0
+SF: Detected XM25QH64A with page size 256 Bytes, erase size 64 KiB, total 8 MiB
+SF: 8388608 bytes @ 0x0 Read: OK
+
+verifying uboot partition...
+ok
+
+verifying kernel and romfs partition...
+ok
+
+set watchdog, resetting...
+
+U-Boot 2014.01-v1.2 (Jan 19 2020 - 15:00:37)
+Board: IPCAM RTS3903 CPU: 500M :rx5281 prid=0xdc02
+force spi nor mode
+DRAM:  64 MiB @ 1066 MHz
+flash status is 0, 0, 0
+SF: Detected XM25QH64A with page size 256 Bytes, erase size 64 KiB, total 8 MiB
+Flash: 0 Bytes
+flash status is 0, 0, 0
+SF: Detected XM25QH64A with page size 256 Bytes, erase size 64 KiB, total 8 MiB
+
+Using default environment
+In:    serial
+Out:   serial
+Err:   serial
+Net:   Realtek PCIe GBE Family Controller mcfg = 0024
+new_ethaddr = 00:00:00:00:00:00
+r8168#0
+
+Autobooting in 1 seconds
+flash status is 0, 0, 0
+
+SF: Detected XM25QH64A with page size 256 Bytes, erase size 64 KiB, total 8 MiB
+SF: 3145728 bytes @ 0x60000 Read: OK
+## Booting image at 82000000 ...
+
+Uncompressing Kernel Image ... OK
+Starting kernel ...
+[    0.000000] Linux version 3.10.27 (jenkins@sohoicamerabuild) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2521) ) #1 PREEMPT Sun Jan 19 15:06:51 CST 2020
+[    0.000000] prom cpufreq = 500000000
+[    0.000000] prom memsize = 67108864
+[    0.000000] hw_ver: 0x2, hw_rev: 0x1, isp_ver: 0x1
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU revision is: 0000dc02
+[    0.000000] FPU revision is: 01730001
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 04000000 @ 00000000 (usable)
+[    0.000000] Reserved contiguous memory at 0x450000(0x13ec000)
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000-0x03ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000-0x03ffffff]
+[    0.000000] icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+[    0.000000] Kernel command line: console=ttyS1,57600 root=/dev/mtdblock6 rts-quadspi.channels=dual
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 40116k/65536k available (3073k kernel code, 25420k reserved, 1028k data, 184k init, 0k highmem)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:57
+[    0.001000] Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+[    0.012000] pid_max: default: 32768 minimum: 301
+[    0.013000] Mount-cache hash table entries: 512
+[    0.016000] pinctrl core: initialized pinctrl subsystem
+[    0.017000] NET: Registered protocol family 16
+[    0.018000] Init force reset registers
+[    0.019000] rtsxb2 registered with IRQs
+[    0.020000] INFO: initializing ISP memory ...
+[    0.021000] INFO: initializing ISP device ...
+[    0.022000] ISP camera platform devices added
+[    0.023000] INFO: initializing SD controller ...
+[    0.024000] INFO: initializing snd device ...
+[    0.025000] snd resvd mem size : 524288
+[    0.026000] INFO: initializing USB host ...
+[    0.027000] INFO: initializing spi host ...0
+[    0.028000] spi platform id is ffffffff
+[    0.029000] INFO: initializing I2C master ...
+[    0.030000] INFO: initializing DMA controller ...
+[    0.031000] INFO: initializing adc ...
+[    0.032000] INFO: initializing pinctrl device ...
+[    0.033000] pinctrl_platform rts3903-pinctrl: rtspc registered with IRQs
+[    0.034000] INFO: initializing ethernet devices ...
+[    0.035000] INFO: initializing USB phy ...
+[    0.036000] INFO: initializing watchdog controller ...
+[    0.037000] INFO: initializing PWM controller ...
+[    0.038000] INFO: initializing crypto device ...
+[    0.052000] bio: create slab <bio-0> at 0
+[    0.053000] rts_dmac rts3903-dmac: DesignWare DMA Controller, 4 channels
+[    0.054000] INFO: realtek DMA engine inited
+[    0.055000] usbcore: registered new interface driver usbfs
+[    0.056000] usbcore: registered new interface driver hub
+[    0.057000] usbcore: registered new device driver usb
+[    0.058000] usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+[    0.059000] Linux video capture interface: v2.00
+[    0.060000] Advanced Linux Sound Architecture Driver Initialized.
+[    0.062000] NET: Registered protocol family 2
+[    0.071000] TCP established hash table entries: 512 (order: 0, 4096 bytes)
+[    0.084000] TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+[    0.097000] TCP: Hash tables configured (established 512 bind 512)
+[    0.109000] TCP: reno registered
+[    0.116000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.127000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.140000] NET: Registered protocol family 1
+[    0.154000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.166000] msgmni has been set to 78
+[    0.175000] NET: Registered protocol family 38
+[    0.184000] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    0.198000] io scheduler noop registered
+[    0.206000] io scheduler deadline registered
+[    0.215000] io scheduler cfq registered (default)
+[    0.224000] Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+[    0.237000] serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+[    0.250000] console [ttyS1] enabled, bootconsole disabled
+[    0.250000] console [ttyS1] enabled, bootconsole disabled
+[    0.272000] serial8250: ttyS1 at MMIO 0x18810100 (irq = 6) is a 16550A
+[    0.285000] serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+[    0.298000] dbg_iomem initialized!
+[    0.306000] rts-quadspi rts3903-qspi: force to set channels from quad mode to dual mode
+[    0.322000] rts-quadspi rts3903-qspi: request 60000000 Hz, force to set 41666666 Hz
+[    0.337000] rts-quadspi rts3903-qspi: found XM25QH64A, expected mx25l12835f
+[    0.351000] rts-quadspi rts3903-qspi: XM25QH64A (8192 Kbytes)
+[    0.363000] Searching for RedBoot partition table
+[    0.372000] 9 RedBoot partitions found on MTD device m25p80
+[    0.383000] Creating 9 MTD partitions on "m25p80":
+[    0.393000] 0x000000000000-0x00000001d800 : "factory_boot"
+[    0.404000] mtd: partition "factory_boot" doesn't end on an erase block -- force read-only
+[    0.421000] 0x00000001d800-0x000000020000 : "factory_info"
+[    0.432000] mtd: partition "factory_info" doesn't start on an erase block boundary -- force read-only
+[    0.452000] 0x000000020000-0x000000040000 : "art"
+[    0.462000] 0x000000040000-0x000000050000 : "config"
+[    0.472000] 0x000000050000-0x000000060000 : "boot"
+[    0.483000] 0x000000060000-0x0000001c6400 : "kernel"
+[    0.493000] mtd: partition "kernel" doesn't end on an erase block -- force read-only
+[    0.509000] 0x0000001c6400-0x000000710000 : "rootfs"
+[    0.519000] mtd: partition "rootfs" doesn't start on an erase block boundary -- force read-only
+[    0.537000] 0x000000710000-0x000000800000 : "rootfs_data"
+[    0.549000] 0x000000060000-0x000000800000 : "firmware"
+[    0.560000] rts-quadspi rts3903-qspi: Realtek QSPI Controller at 0x18030000 (irq 5)
+[    0.575000] rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+[    0.676000] rtl8168 rts3903-rtl8168 (unregistered net_device): Get invalid MAC address from flash!
+[    0.694000] eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+[    0.706000] PPP generic driver version 2.4.2
+[    0.714000] PPP MPPE Compression module registered
+[    0.724000] NET: Registered protocol family 24
+[    0.733000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.746000] ehci-rts: ehci-rts platform driver
+[    0.755000] ehci-platform ehci-platform: EHCI Host Controller
+[    0.767000] ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+[    0.783000] ehci-platform ehci-platform: irq 11, io mem 0x18100000
+[    0.801000] ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+[    0.813000] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.827000] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.841000] usb usb1: Product: EHCI Host Controller
+[    0.851000] usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+[    0.862000] usb usb1: SerialNumber: ehci-platform
+[    0.872000] hub 1-0:1.0: USB hub found
+[    0.880000] hub 1-0:1.0: 1 port detected
+[    0.888000] i2c /dev entries driver
+[    0.895000] rtscam:isp resvd mem addr : 0x004d0000, size : 0x136c000
+[    0.910000] rtscam:rtscam_mem_init v:0xa04d0000 p:0x004d0000 s:0x0000136c
+[    0.924000] rtscam:rtscam_lock_init
+[    0.931000] rtscam:rtscam_soc_probe
+[    0.938000] rtscam:rtscam_hx280_probe
+[    0.950000] rtscam:hx280enc:HW at base <0x18060000> with ID <0x48317011>
+[    0.964000] rtscam:rtscam_jpgenc_probe
+[    0.976000] rtscam:rtscam_osd2_probe
+[    0.984000] rtscam:rtstream_init
+[    0.991000] Stopped watchdog timer
+[    0.998000] Started watchdog timer
+[    1.004000] timer margin: 8 sec
+[    1.056000] rlx snd internal codec init
+[    1.064000] soc-audio soc-audio.0.auto: ASoC: machine RLX_INTERN_CARD should use snd_soc_register_card()
+[    1.084000] soc-audio soc-audio.0.auto:  rlx-codec-digital <-> pcm-platform mapping ok
+[    1.100000] soc-audio soc-audio.0.auto:  rlx-codec-analog <-> pcm-platform mapping ok
+[    1.117000] rlx snd spdif init
+[    1.123000] soc-audio soc-audio.1.auto: ASoC: machine RLX_SPDIF_CARD should use snd_soc_register_card()
+[    1.143000] soc-audio soc-audio.1.auto:  rlx-spdif <-> spdif-platform mapping ok
+[    1.158000] nf_conntrack version 0.5.0 (626 buckets, 2504 max)
+[    1.171000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.181000] TCP: cubic registered
+[    1.188000] NET: Registered protocol family 17
+[    1.197000] Key type dns_resolver registered
+[    1.206000] slp_flash_init
+[    1.212000] Registered character driver slp_flash_chrdev
+[    1.226000] ALSA device list:
+[    1.232000]   #0: RLX_INTERN_CARD
+[    1.238000]   #1: RLX_SPDIF_CARD
+[    1.249000] VFS: Mounted root (squashfs filesystem) readonly on device 31:6.
+[    1.264000] Freeing unused kernel memory: 184K (80412000 - 80440000)
+- preinit -
+- init -
+
+Please press Enter to activate this console. [    5.900000] Success to init gpio reset
+[    6.048000] cryptodev: driver 1.9 loaded.
+/etc/rc.common: cd: line 97: can't cd to /etc/uci-defaults
+Sun Jan 19 08:01:59 UTC 2020
+open /dev/crypto success
+close /dev/crypto
+[   10.295000] leds-gpio leds-gpio: pins are not configured from the driver
+[main:35] Success to start audiopaly
+Starting wlan-manager: wlan-manager started.
+[   13.216000] usb 1-1: new high-speed USB device number 2 using ehci-platform
+[   13.344000] usb 1-1: New USB device found, idVendor=0bda, idProduct=f179
+[   13.358000] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   13.372000] usb 1-1: Product: 802.11n NIC
+[   13.380000] usb 1-1: Manufacturer: Realtek
+[   13.389000] usb 1-1: SerialNumber: FFE04CB82100
+[   15.137000] wlan-manager: insmod 8188fu.ko...
+[   16.051000] usbcore: registered new interface driver rtl8188fu
+1579417331917|527|4|cloud.c:91:main| - cloud-sdk version: 1.3.9-rc04, build_time:20190705_181313
+**************************************************
+********************config dump*******************
+--------------------------------------------------
+sef domain                      : n-deventry-dcipc.tplinkcloud.com
+sef port                        : 443
+cloud svr default port          : 443
+default svr                     : n-devs-dcipc.tplinkcloud.com
+default port                    : 443
+default valid time              : 172800
+heartbeat interval              : 30000
+request timeout                 : 5000
+reconnect timewait max          : 1024000
+reconnect cachedsvr max times   : 5
+reconnect defaultsvr max times  : 5
+reconnect random time min       : 2000
+reconnect random time max       : 256000
+short connect interval          : 259200000
+max message number              : 1000
+max client number               : 20
+service file                    : /etc/cloud-sdk/cloud_service.cfg
+cer file                        : /etc/cloud-sdk/2048_newroot.cer
+ssl verify CN                   : 
+ssl verify time                 : 0
+**************************************************
+[   19.976000] device eth0 entered promiscuous mode
+[   19.988000] br-wan: port 1(eth0) entered forwarding state
+[   19.999000] br-wan: port 1(eth0) entered forwarding state
+10-wifi-ethernet-switch: boot not done, don't switch
+[   22.000000] br-wan: port 1(eth0) entered forwarding state
+/etc/rc.common: line 1: can't create null: Read-only file system
+open /dev/crypto success
+1579417335352|680|3|cloud_api.c:33:cloud_api_init| - cloud-sdk version: 1.3.9-rc04, build_time:20190705_181313
+not in ap mode, remove nf_conntrack_ipv4
+not in ap mode, no need to load ap_filter
+Generating RSA private key, 1024 bit long modulus
+Generating selfsigned certificate with subject 'C=CN;ST=China;L=China;CN=TP-Link;' and validity 2020-01-19 07:02:17-2029-11-27 07:02:17
+now start cet...
+Command failed: Unknown error
+[storage] create_and_init_shm([   27.989000] rtscam:begin to load fw from C200_V1_SC2232H_FW.bin
+134). creating initial shm...
+[   28.006000] rtscam:Load firmware size : 131024.
+[storage] create_and_init_shm(137). shm creating succeeded, id: 65538, len:16960
+[storage] create_and_init_shm(148). shm mapped @0x776a4000.
+[storage] create_and_init_sem(175). creating initial sem...
+[storage] wait_till_fs_ready(64). jffs is ready.
+== SENSOR TYPE: SC2232H. ==
+[   28.074000] rtscam:Found ISP 1.011 device
+umount: can't umount /tmp/mnt/harddisk_1: No such file or directory
+ [storage] formatted_exec(70). system function error :No such file or directory
+
+ [storage] do_umount(211). No such file or directory
+[   28.336000] rtscam:video device <rts3903-isp> registered
+[   28.348000] rtscam:rts3903-isp initialized
+cannot find dbg_iomem, create it...
+[get_model_profile]-759: sensor: SC2232H, load config: /tmp/base-files/etc/dn_switch_SC2232H.ini
+C200 1.0:smartir_enable
+C200 1.0:smartir_level
+name=C200 1.0
+led_cnt=1
+with_ldr=0
+irt_comm[0]={200,50}
+irt_comm[1]={170,40}
+irt_comm[2]={140,30}
+irt_comm[3]={120,18}
+irt_comm[4]={100,6}
+irt_comm[5]={80,4}
+irt_comm[6]={60,2}
+irt_comm[7]={55,1}
+ir_cut_gpio_num=3
+ir_led_gpio_num=9
+irt_ncomm={100,6}
+ir_delay=5
+gain_I={0.973585,0.977537}
+gain_N={1.277540,1.768843}
+natural_rate_thresh=0.050000
+thresh_no_adc={1500,1200,900,630,440,160,60,20}
+day_ae_compensation={0,0,0,0,0,0,0,0}
+day_ae_antiflicker_enable=1
+day_ae_antiflicker_freq=50
+night_ae_compensation=0
+night_ae_antiflicker_enable=0
+day_drc_asymmetry={20,17,14,11,8,4,0,0}
+night_drc_asymmetry={0,0,0,0,0,5,15,0}
+ae_gain_level={0,2,4,8,16,32,64,128}
+smartir_enable=0
+smartir_level=30
+day_auto_wdr_level=60
+night_auto_wdr_level=60
+sleep: invalid number '0.1'
+Invalid sdcard device /dev/mmcblk0, please check configuration.
+[storage] formatted_exec(70). system function error :No such file or directory
+
+[storage] uci_load_single_disk(530). mounting disk 1 failed
+open /dev/crypto success
+[storage] update_disk_status_for_cet(339). ubus_lookup_id update_disk_status failed
+
+stream0 roi attr: 0 0 0 0 0 0
+stream1 roi attr: 0 0 0 0 0 0
+video_init done
+[buffer_pool_alloc]-304: buffer audio queue id.
+
+[storage] init_stm_files_structure(144). sizeof(struct stm_file) = 72
+[storage] open_shm(305). exit open shm(shmprt:0x77f6d000  shmlen:16960  flag = 0x1b6).
+[storage] open_sem(333). exit open sem(semid:32769, flag:0x1b4).
+[storage] data_sync_handle_thread(186). register signal handler on thread:0x7626e500
+[record_create]-5343: The adjusting time is: 1579417343
+[bq_register_record]-676: bq_register_record chn: 0, stream_t: 0, tid: 1981736192
+
+[storage] stm_open(1807). [0] stm_fd is allocated. channel = 0, type = video, flags = 0x1, mode = 0x1
+[record_stop]-3597: Record stop time is: 1579417343
+[storage] update_disk_status_for_cet(339). ubus_lookup_id update_disk_status failed
+
+[input_h264_ch0_device_init]-423: Init H264 video device H264-ch0
+[input_h264_ch1_device_init]-470: Init H264 video device H264-ch1
+input_sound_device_init done
+bufq[0]: empty sig list. create one. The first thread id is 1980687616
+bufq[1]: empty sig list. create one. The first thread id is 1980687616
+bufq[2]: empty sig list. create one. The first thread id is 1980687616
+[main]-1038: Server begin eventloop
+[cet_ubus_init]-5503: connected as ba598f06
+
+[motord_ubus_call]-250: Failed to ubus lookup id, et = 4
+
+[motor_reload_TT_config]-295: motor_reload_TT_config(295):motor reloadTargetTrackConfig failed
+
+Play this stream using the URL "rtsp://192.168.0.45/stream1"
+Play this stream using the URL "rtsp://192.168.0.45/stream2"
+[denoise_intf_create 147] denoise library. version: 1.3. time: 2019-12-27
+Table address = 0 
+8000 AECNS is created sucessfully 
+Sound goto normal mode
+[record_stop]-3597: Record stop time is: 1579417344
+[cal_reboot_interval]-97: current time is : Sun Jan 19 08:02:26 2020
+, remain 68254 sec to autoreboot
+
+[2020-01-19 08:02:26] nvid.c:main:150 - nvid started
+[2020-01-19 08:02:26] nvid.c:main:172 - signal_handler succeed
+[2020-01-19 08:02:26] nvid.c:main:193 - begin start onvif
+[dn_switch_ctrl_vda]-1377: call vda disable/enable md/od failed
+boot_done: mode_switch to wifi
+[2020-01-19 08:02:27] nvid.c:main:200 - start onvif succeed
+[2020-01-19 08:02:27] nvid.c:main:214 - begin uloop run
+[dn_switch_ctrl_vda]-1377: call vda disable/enable md/od failed
+[image_light_freq_mode_set]-1242: light freq mode:3
+
+[2020-01-19 08:02:27] main:818 - ir_state:1
+vda_ubus_register_dn_switch_event_handler 674
+[initialize 25] libsmart init. version: 1.0
+switch to wifi...
+--------call dhcp restart----
+killall: udhcpc: no process killed
+----------udhcpc start with 192.168.0.45--------
+update_network does nothing
+switch done
+[   37.148000] wlan-manager: start sta...
+[   37.160000] wlan-manager: ifconfig wlan0 up.
+[   38.160000] device wlan0 entered promiscuous mode
+[   38.172000] br-wan: port 2(wlan0) entered forwarding state
+[   38.183000] br-wan: port 2(wlan0) entered forwarding state
+update without switch...
+switch done
+===insmod /lib/modules/3.10.27/gpio-motor.ko===
+[   40.163000] Registered character driver x-motor
+[   40.178000] Registered character driver y-motor
+[   40.187000] br-wan: port 2(wlan0) entered forwarding state
+1579417352809|527|3|cloud_ip_list.c:56:cloud_ip_list_parse| - get addr info error, host:n-deventry-dcipc.tplinkcloud.com, serv:443, Name or service not known
+1579417352809|527|3|cloud_session.c:1350:cloud_session_connect_sef| - fail to parse the domain:n-deventry-dcipc.tplinkcloud.com:443
+1579417352809|527|3|cloud_session.c:356:cloud_session_active_long_time| - fail to connect the SEF, result:-1
+[   42.703000] recv eapol packet
+[   42.712000] send eapol packet
+[   42.723000] recv eapol packet
+[   42.730000] send eapol packet
+get dns form static dhcp:192.168.0.1, prev_append_dns:192.168.0.1
+no need to set append_dns
+Function is:checkDeviceBindStatus, Line is:1047.cloud device has been bind to cloud account.
+[storage] set_dev_bind_status(237). STM: device bind status: 1
