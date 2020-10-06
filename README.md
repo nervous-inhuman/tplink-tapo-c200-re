@@ -32,7 +32,7 @@ Reverse Engineering the TP-Link Tapo C200 camera
 Turning on Diagnostics in the Tapo app results in a `root` login on `pts/0`
 
 **TODOs:**
-* Do we need an internet connection to trigger this, can we do the same from local network with internet access ?  
+* Do we need an internet connection to trigger this, can we do the same from local network without internet access ?  
 
 ```
 [   58.336000] Erase from 0X40000 to 0X50000:
