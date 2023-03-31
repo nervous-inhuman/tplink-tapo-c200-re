@@ -1,16 +1,22 @@
-# tplink-tapo-c200-re
-Reverse Engineering the TP-Link Tapo C200 camera
+# TP-Link Tapo C200 Camera Reverse Engineering
 
+This document provides technical details on the reverse engineering process of the TP-Link Tapo C200 camera.
 
-### Components
+There is an another great resource about reverse engineering the camera by [DrmnSamoLiu](https://github.com/DrmnSamoLiu) that can be found here:
+https://drmnsamoliu.github.io/
+
+## Components
+
+The camera consists of the following components:
+
 | Name         | Component           | Description                                               |
 | ------------ | -------------       | --------------------------------------------------------- | 
-| SoC          | Realtek RTS3903     | CPU: 500MHz :rx5281 prid=0xdc02                           | 
-| RAM          | x                   | 64 MiB @ 1066 MHz                                         |
-| Serial Flash | XMC XM25QH64A       | with page size 256 Bytes, erase size 64 KiB, total 8 MiB. |
+| SoC          | Realtek RTS3903     | CPU: 500MHz, rx5281 prid=0xdc02                           | 
+| RAM          | N/A                 | 64 MiB @ 1066 MHz                                         |
+| Serial Flash | XMC XM25QH64A       | Page size: 256 Bytes, erase size: 64 KiB, total: 8 MiB.   |
 | Sensor       | SC2232H             |                                                           | 
 
-### Flash Layout
+## Flash Layout
 
 | dev	  | start	           | end              | size            |  erasesize    | name          |
 | ----- | ---------------  | ---------------- | --------------- | ------------- | ------------- | 
@@ -24,31 +30,18 @@ Reverse Engineering the TP-Link Tapo C200 camera
 | mtd7  | 0x000000710000   | 0x000000800000   | x               | x             | rootfs_data   | 
 | mtd8  | 0x000000060000   | 0x000000800000   | x               | x             | firmware      |
 
+## Default Root Password and U-Boot Console
 
-- - - - -
+The default root password is `slprealtek` and the U-Boot stop keyword is `slp`. Thanks to Kubik369 for this [discovery](https://github.com/nervous-inhuman/tplink-tapo-c200-re/issues/1#issuecomment-742609974).
 
-### Notes
+## Ethernet
 
-Turning on Diagnostics in the Tapo app results in a `root` login on `pts/0`
+The pinout for the camera ethernet port was provided by Kubik369. It is a Molex Picoblade connector (1.27mm pitch, 4-pin). The numbering is T-568A.
+<br>
+<img src="https://user-images.githubusercontent.com/4379661/101809993-8c0f5100-3b18-11eb-9080-01ac77437e04.jpg" width="300px">
 
-**TODOs:**
-* Do we need an internet connection to trigger this, can we do the same from local network without internet access ?  
+## Links
 
-```
-[   58.336000] Erase from 0X40000 to 0X50000:
-[   58.348000] .
-[   58.353000] Program from 0X40000 to 0X50000:
-[   58.560000] .
-write successfully
-1600115448305|696|3|cloud_interface.c:720:tlcc_refresh_helloCloud| - tlcc_refresh_helloCloud called
-1600115448307|543|3|cloud_client_handle.c:1087:cloud_client_handle_refresh_helloCloud| - cloud_client_handle_refresh_helloCloud called
-1600115448343|696|3|cloud_register.c:847:register_handle_refresh_hellocloud_request| - register_handle_refresh_hellocloud_request called
-Sep 14 22:30:48 login[1274]: root login on 'pts/0'
-```
-* Dump the Flash (CLIP + Flash Reader, or can we get somehow access to the U-Boot console and read it out?)
-
-- - - - -
-
-### Links
-
-[TE7C200 - FCCid.io](https://fccid.io/TE7C200)
+- [TE7C200 - FCCid.io](https://fccid.io/TE7C200)
+- [C100 - GPL Sources](https://static.tp-link.com/resources/gpl/c100_GPL_v1.tar.bz2)
+- [C200 - GPL Sources](https://static.tp-link.com/resources/gpl/camera_slp_realtek_c200.tar.bz2)
